@@ -239,7 +239,7 @@ function openGitHubSignIn() {
 
   return new Promise(resolve => {
 
-    const authURL = 'https://github.com/login/oauth/authorize?client_id=7ede3eed3185e59c042d&scope=repo,user,write:org,workflow';
+    const authURL = 'https://forge.gzod01.fr/login/oauth/authorize?client_id=9de7d049-b10c-4d21-a2f5-74b7dc228161&redirect_uri=https://code.gzod01.fr/git/login&scope=repo,user,write:org,workflow';
 
     if (isMobile) {
 
@@ -282,12 +282,13 @@ async function getGithubToken(gitCode) {
 
   // post through CORS proxy to git with clientId, clientSecret and code
   const resp = await axios.get(window.location.origin + '/api/cors?url=' +
-                               'https://github.com/login/oauth/access_token?' +
-                               'client_id=7ede3eed3185e59c042d' +
-                               '&client_secret=c1934d5aab1c957800ea8e84ce6a24dda6d68f45' +
+                               'https://forge.gzod01.fr/login/oauth/access_token?' +
+                               'client_id=9de7d049-b10c-4d21-a2f5-74b7dc228161' +
+                               '&client_secret=gto_6mjf6jevziqhluynctutabbbh42e7qqyypjkxndzfw77iixhziwq' +
                                '&code=' + gitCode, '', true);
 
   // save git token to localStorage
+  console.log(resp);
   gitToken = resp.split('access_token=')[1].split('&')[0];
   saveGitTokenLS(gitToken);
 
@@ -296,7 +297,7 @@ async function getGithubToken(gitCode) {
   if (getStorage('loggedUser') === null) {
 
     // get logged user
-    loggedUser = await axios.get('https://api.github.com/user', gitToken);
+    loggedUser = await axios.get('https://forge.gzod01.fr/api/user', gitToken);
     loggedUser = loggedUser.login;
   
     // save logged user in local storage

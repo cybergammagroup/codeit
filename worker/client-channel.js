@@ -6,23 +6,23 @@
 // internal paths
 const INTERNAL_PATHS = {
 
-  internal: 'https://codeit.codes/',
-  internal_: 'https://dev.codeit.codes/',
+  internal: 'https://code.gzod01.fr/',
+  internal_: 'https://dev.code.gzod01.fr/',
 
-  run: 'https://codeit.codes/run',
-  run_: 'https://dev.codeit.codes/run',
+  run: 'https://code.gzod01.fr/run',
+  run_: 'https://dev.code.gzod01.fr/run',
   
   relLivePath: ('/run/' + '_/'.repeat(15)),
   
-  clientId: 'https://codeit.codes/worker/getClientId',
-  clientId_: 'https://dev.codeit.codes/worker/getClientId',
+  clientId: 'https://code.gzod01.fr/worker/getClientId',
+  clientId_: 'https://dev.code.gzod01.fr/worker/getClientId',
 
 };
 
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-const isDev = (self.location.origin === 'https://dev.codeit.codes');
+const isDev = (self.location.origin === 'https://dev.code.gzod01.fr');
 
 
 // key                : value
@@ -265,7 +265,7 @@ function handleFetchRequest(request, event) {
       
       // if fetch is an internal Git fetch
       // with an error code
-      if (request.url.startsWith('https://api.github.com')
+      if (request.url.startsWith('https://forge.gzod01.fr/api')
           && resp.status === 403) {
         
         console.debug('[ServiceWorker] Intercepted Github API request', request);

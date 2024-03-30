@@ -227,7 +227,7 @@ async function renderSidebarHTML(pageNum = 1) {
   
   
   // if switched directory while loading, return
-  // through cde.run links the branch can change (from no branch to the default branch),
+  // through code.gzod01.fr links the branch can change (from no branch to the default branch),
   // so don't take it into account
   if (user !== treeLoc[0] ||
       repoName !== treeLoc[1].split(':')[0] ||

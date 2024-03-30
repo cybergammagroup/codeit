@@ -117,7 +117,7 @@ async function setupWorkerChannel() {
       
     }
     
-    if (window.location.hostname === 'dev.codeit.codes') {
+    if (window.location.hostname === 'dev.code.gzod01.fr') {
       
       workerChannel.postMessage({
         type: 'updateWorker'

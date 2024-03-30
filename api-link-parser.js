@@ -1,10 +1,10 @@
 
-// decodes cde.run links
+// decodes code.gzod01.fr links
 
 // eg.
-// https://cde.run/mrdoob/three.js/examples/physics_ammo_break.html
+// https://code.gzod01.fr/mrdoob/three.js/examples/physics_ammo_break.html
 // or
-// https://cde.run/https://github.com/mrdoob/three.js/blob/dev/examples/physics_ammo_break.html
+// https://code.gzod01.fr/https://github.com/mrdoob/three.js/blob/dev/examples/physics_ammo_break.html
 
 function decodeLink(url) {
 
@@ -23,10 +23,10 @@ function decodeLink(url) {
   url = url.replace('?' + urlQuery.toString(), '');
   
 
-  const isDev = url.startsWith('https://dev.cde.run/');
+  const isDev = url.startsWith('https://dev.code.gzod01.fr/');
 
-  if (!isDev) url = url.slice('https://cde.run/'.length);
-  else url = url.slice('https://dev.cde.run/'.length);
+  if (!isDev) url = url.slice('https://code.gzod01.fr/'.length);
+  else url = url.slice('https://dev.code.gzod01.fr/'.length);
   
   const isGithub = url.startsWith('https://github.com/');
   if (isGithub) url = url.slice('https://github.com/'.length);
@@ -41,8 +41,8 @@ function decodeLink(url) {
   }
   
   
-  let baseURL = 'https://codeit.codes';
-  if (isDev) baseURL = 'https://dev.codeit.codes';
+  let baseURL = 'https://code.gzod01.fr';
+  if (isDev) baseURL = 'https://dev.code.gzod01.fr';
 
 
   let linkData = {};

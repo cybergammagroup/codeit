@@ -14,7 +14,7 @@ export default function handler(request, response) {
   
   if (query.url) {
     
-    let url = 'https://codeit.codes';
+    let url = 'https://code.gzod01.fr';
     
     url += '/api/link?url=' + query.url + '&oembed=true';
     
@@ -32,7 +32,7 @@ export default function handler(request, response) {
         "version": "2.0",
         "cache_age": 3600,
         "provider_name": "Codeit",
-        "provider_url": "https://codeit.codes/"
+        "provider_url": "https://code.gzod01.fr/"
       };
       
     } else {

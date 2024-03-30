@@ -1,13 +1,13 @@
 
 
 
-
+/*
 
 https://gitlab.com/api/v4/projects?access_token=19a48ef34811b9425b6fc1e4c75f1358bdf7f528d151ec5624c46fa61e8b4c03&order_by=updated_at&min_access_level=30
 https://docs.gitlab.com/ee/api/oauth2.html
 https://docs.gitlab.com/ee/api/projects.html
 https://docs.gitlab.com/ee/api/repository_files.html
-
+*/
 
 function encodeURL(str) {
   encodeURIComponent(str);
@@ -20,7 +20,7 @@ let git = {
   'getBlob': async (treeLoc, sha) => {
 
     // map tree location
-    let query = 'https://api.github.com';
+    let query = 'https://forge.gzod01.fr/api';
     const [user, repo] = treeLoc;
 
     // get repository branch
@@ -42,7 +42,7 @@ let git = {
   'getFile': async (treeLoc, fileName) => {
 
     // map tree location
-    let query = 'https://api.github.com';
+    let query = 'https://forge.gzod01.fr/api';
     const [user, repo, contents] = treeLoc;
 
     // get repository branch
@@ -173,7 +173,7 @@ let git = {
   'getRepo': async (treeLoc) => {
 
     // map tree location
-    let query = 'https://api.github.com';
+    let query = 'https://forge.gzod01.fr/api';
     const [user, repo] = treeLoc;
 
     // get repository branch
@@ -192,7 +192,7 @@ let git = {
   'getBranches': async (treeLoc) => {
 
     // map tree location
-    let query = 'https://api.github.com';
+    let query = 'https://forge.gzod01.fr/api';
     const [user, repo] = treeLoc;
 
     const [repoName] = repo.split(':');
@@ -215,7 +215,7 @@ let git = {
     // get repository branch
     let [repoName, branch] = repo.split(':');
 
-    const query = 'https://api.github.com/repos' +
+    const query = 'https://forge.gzod01.fr/api/repos' +
                   '/' + user + '/' + repoName +
                   '/contents' + contents +
                   '/' + commit.file.name;
@@ -258,7 +258,7 @@ let git = {
   // create a repository
   'createRepo': async (repoName, private) => {
 
-    const query = 'https://api.github.com/user/repos';
+    const query = 'https://forge.gzod01.fr/api/user/repos';
 
     const repoData = {
       name: repoName,
@@ -287,7 +287,7 @@ let git = {
   'createBranch': async (treeLoc, shaToBranchFrom, newBranchName) => {
 
     // map tree location
-    let query = 'https://api.github.com';
+    let query = 'https://forge.gzod01.fr/api';
     const [user, repo] = treeLoc;
     const [repoName] = repo.split(':');
 
@@ -319,7 +319,7 @@ let git = {
     const [user, repo] = treeLoc;
     const [repoName] = repo.split(':');
 
-    const query = 'https://api.github.com/repos' +
+    const query = 'https://forge.gzod01.fr/api/repos' +
                   '/' + user + '/' + repoName + '/forks';
 
     // change pushing state
@@ -342,7 +342,7 @@ let git = {
     const [user, repo] = treeLoc;
     const [repoName] = repo.split(':');
 
-    const query = 'https://api.github.com/repos' +
+    const query = 'https://forge.gzod01.fr/api/repos' +
                   '/' + user + '/' + repoName +
                   '/collaborators/' + usernameToInvite;
 
@@ -366,7 +366,7 @@ let git = {
     const [user, repo] = treeLoc;
     const [repoName] = repo.split(':');
 
-    let query = 'https://api.github.com/user' +
+    let query = 'https://forge.gzod01.fr/api/user' +
                 '/repository_invitations';
 
     // get the query
@@ -404,7 +404,7 @@ let git = {
     const [user, repo] = treeLoc;
     const [repoName] = repo.split(':');
 
-    const query = 'https://api.github.com/repos' +
+    const query = 'https://forge.gzod01.fr/api/repos' +
                   '/' + user + '/' + repoName;
 
     // dispatch request with query

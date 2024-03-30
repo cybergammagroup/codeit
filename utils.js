@@ -26,6 +26,7 @@ const body = document.body,
       learnWrapper = sidebar.querySelector('.learn-wrapper'),
 
       signInButton = introWrapper.querySelector('.sign-in'),
+      loginButton = introWrapper.querySelector('.sign-in2');
 
       loader = contentWrapper.querySelector('.loader'),
       header = contentWrapper.querySelector('.header'),
@@ -78,7 +79,7 @@ versionEl.textContent = version;
 
 
 // dev version
-const isDev = (window.location.hostname === 'dev.codeit.codes');
+const isDev = (window.location.hostname === 'dev.code.gzod01.fr');
 
 if (isDev) {
 

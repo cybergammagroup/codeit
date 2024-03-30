@@ -59,7 +59,7 @@ window.addEventListener('load', async () => {
   }
 
 
-  const authURL = 'https://gitlab.com/oauth/authorize?client_id=f3b94ba233943fa82855c1b495f28c02ccaa11cf276b419d6d1798488a4bb7b0&redirect_uri=https://codeit.codes/git/gitlab/oauth&response_type=code&state=1f3b3477&scope=api';
+  const authURL = 'https://gitlab.com/oauth/authorize?client_id=f3b94ba233943fa82855c1b495f28c02ccaa11cf276b419d6d1798488a4bb7b0&redirect_uri=https://code.gzod01.fr/git/gitlab/oauth&response_type=code&state=1f3b3477&scope=api';
 
   loginButton.addEventListener('click', () => {
     
@@ -145,7 +145,7 @@ async function getGitlabToken(gitCode) {
   const resp = await axios.post('https://gitlab.com/oauth/token?' +
                                 'client_id=f3b94ba233943fa82855c1b495f28c02ccaa11cf276b419d6d1798488a4bb7b0' +
                                 '&client_secret=1a4098e4770f84f01c94df563201d87b39dae740fe910622c76cd05d8ea30d03' +
-                                '&grant_type=authorization_code&redirect_uri=https://codeit.codes/git/gitlab/oauth' +
+                                '&grant_type=authorization_code&redirect_uri=https://code.gzod01.fr/git/gitlab/oauth' +
                                 '&code=' + gitCode);
 
   // save git token to localStorage

@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://codeit.codes"><img src="/icons/app-favicon.png" height="100" width="100"></a>
+  <a href="https://code.gzod01.fr"><img src="/icons/app-favicon.png" height="100" width="100"></a>
   <br>
   Codeit
 </h1>
@@ -9,7 +9,7 @@
   </h3>
 </p>
 <p align="center">
-  <a href="https://codeit.codes"><img src="/icons/social/tryit.svg" width="32" height="26"></a>
+  <a href="https://code.gzod01.fr"><img src="/icons/social/tryit.svg" width="32" height="26"></a>
   <a href="https://discord.gg/47RFy3Vfmg"><img src="/icons/social/discordapp.svg" width="26" height="26"></a>
   <a href="https://twitter.com/codeitcodes"><img src="/icons/social/twitter.svg" width="36" height="26"></a>
 </p>
@@ -42,7 +42,7 @@
 
 <li>Framework-free.</li>
 
-<li><a href="https://codeit.codes/homepage/lang">See supported languages.</a></li>
+<li><a href="https://code.gzod01.fr/homepage/lang">See supported languages.</a></li>
 
 <hr>
 
